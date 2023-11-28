@@ -35,8 +35,27 @@ public class CalcTest {
         assertThat(rs).isEqualTo(30);
 
     }
+    @Test
+    @DisplayName("10 - 5 => 5")
+    void t5(){
+        int rs = Calc.run("10 - 5");
+        assertThat(rs).isEqualTo(5);
 
+    }
 
+    @Test
+    @DisplayName("10 * 5 => 50")
+    void t6(){
+        int rs = Calc.run("10 * 5");
+        assertThat(rs).isEqualTo(50);
 
+    }
+    @Test
+    @DisplayName("10 / 5 => 2")
+    void t7(){
+        int rs = Calc.run("10 / 5");
+        assertThat(rs).isEqualTo(2);
+
+    }
 
 }
