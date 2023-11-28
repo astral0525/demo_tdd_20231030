@@ -7,11 +7,12 @@ public class Calc {
         if (exp.isBlank()) {
             return 0;
         }
+        exp = stripOuterParentheses(exp);
         String[] expBits = exp.split(" ");
         String sign = expBits[1];
 
         int num1 = Integer.parseInt(expBits[0]);
-        int num2 = Integer.parseInt(expBits[1]);
+        int num2 = Integer.parseInt(expBits[2]);
 
         switch (sign) {
             case "+":
@@ -34,4 +35,13 @@ public class Calc {
 
 
     }
+
+    private static String stripOuterParentheses(String exp){
+        if(exp.startsWith("(") && exp.endsWith(")")){
+            return exp.substring(1, exp.length()-1);
+        }
+        return exp;
+    }
+
+
 }

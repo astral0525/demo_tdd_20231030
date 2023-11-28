@@ -58,4 +58,13 @@ public class CalcTest {
 
     }
 
+    @Test
+    @DisplayName("(10 + 10) = 20")
+    void t8(){
+        int rs = Calc.run("(10 + 10)");
+        assertThat(rs).isEqualTo(20);
+    }
+
+
+
 }
